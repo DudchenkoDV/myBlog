@@ -12,10 +12,14 @@
     {% endblock %}
   </div>
   <div id="sidebar">
-    <h2>My blog</h2>
+    <h2>Мой блог</h2>
     <p>
-        This is my blog.
+        Это мой блог.
         Я написал уже {% total_posts %} постов.
+    </p>
+    <p>
+        <a href="{% url "blog:post_feed" %}">Следите за RSS
+        </a>
     </p>
     <h3>Мои последние посты</h3>
     {% show_latest_posts 3 %}
